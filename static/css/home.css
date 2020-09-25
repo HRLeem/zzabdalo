@@ -1,0 +1,54 @@
+.b { border: 1px solid black; }
+.r { border: 1px solid red;}
+
+.wrap {
+    width: 500px;
+    height: 900px;
+    margin: 0 auto;
+}
+
+
+nav {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #ebebeb;
+}
+nav div {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-left: 1.5rem;
+    padding-top: 1.8rem;
+}
+
+.container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    height: 75%;
+}
+.big_boxes {
+    display: flex;
+    justify-content: space-between;
+    height: 9rem;
+}
+.big_boxes div {
+    width: 47%;
+    border: 1.5px solid #777;
+    border-radius: 10px;
+}
+.big_boxes a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.big_boxes img {
+    width: 13vw;
+    height: 11vw !important;
+}
+span.main-btn {
+    color: #777;
+    font-weight: bold;
+    margin-top: 0.4rem;
+}

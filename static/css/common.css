@@ -1,0 +1,134 @@
+.b { border: 1px solid black; }
+.r { border: 1px solid red;}
+
+.wrap {
+    width: 500px;
+    height: 900px;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    height: 10%;
+}
+nav div {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-left: 1.5rem;
+    padding-top: 1.8rem;
+}
+
+.container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+}
+.date {
+    background-color: #ebebeb;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 4%;
+    font-size: 0.8rem
+}
+
+input {
+    width: 70%;
+    height: 2.2rem;
+    font-size: 1.1rem;
+    border: 0;
+    border-bottom: 1px solid #ebebeb;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:focus {outline:1px solid coral;}
+
+.bold {font-weight: bold;}
+
+.about_phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5rem;
+}
+.upper_phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    padding: 0.4rem;
+    background-color: #fff;
+    color: coral;
+    border: 1.3px solid coral;
+    border-radius: 10px;
+    font-weight: 600;
+}
+div.phone {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    align-items: center;
+    margin-top: 0.7rem;
+}
+input.phone { width: 15%; text-align: center;}
+
+div.chk {
+    display: flex;
+    align-items: center;
+}
+input.chk {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.8rem;
+}
+.ver_num {
+    display: flex;
+    justify-content: space-between;
+}
+.timeout { border-bottom: 1px solid #ebebeb; width: 25%; font-weight: 600;}
+
+.for_ticket {
+    display: flex;
+    height: 4.3rem;
+}
+.ticket {
+    border: 2px solid cadetblue;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #888
+}
+.ticket_side {
+    border: 2px solid cadetblue;
+    border-left: 0;
+    width: 10%;
+}
+
+.info {
+    color: #999;
+    background-color: #ebebeb;
+    padding: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+}
+
+button#pay {
+    width: 50%;
+    height: 3rem;
+    display: block;
+    margin: 2rem auto;
+    background-color: coral;
+    color: #fff;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 10px;
+}

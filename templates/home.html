@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/home.css') }}">
+    <script src="{{ url_for('static', filename='./js/home.js') }}"></script>
+    <!-- <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <script src="../static/js/home.js"></script> -->
+    <title>짭 페달로</title>
+</head>
+
+<body>
+    <div class="wrap  b">
+        <nav class="">
+            <div>짭-페달로</div>
+        </nav>
+        <div class="container b">
+            <div class="big_boxes">
+                <div class="r-user b">
+                    <a href="/user">
+                        <img
+                            src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/bicycle.png">
+                        <span class="main-btn">회원대여</span>
+                    </a>
+                </div>
+                <div class="r-oneday b">
+                    <a href="/one_day">
+                        <img
+                            src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png">
+                        <span class="main-btn">1일권구매</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

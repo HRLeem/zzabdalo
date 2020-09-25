@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/common.css') }}">
+    <script src="{{ url_for('static', filename='./js/common.js') }}"></script>
+    <!-- <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <script src="../static/js/common.js"></script> -->
+    <title>짭 페달로</title>
+</head>
+
+<body>
+    <div class="wrap  b">
+        <nav class="">
+            <div>1일 이용권 구매</div>
+        </nav>
+        <div class="date">
+            가입/완료일 <span class="date"></span>
+        </div>
+        <div class="container ">
+            <div class="about_phone">
+                <div class="upper_phone">
+                    <span class="bold">휴대폰 번호</span>
+                    <button type="button" onclick="send_verify()">인증번호 보내기</button>
+                </div>
+                <div class="phone">
+                    <input type="text" class="phone p1" maxlength="3">-
+                    <input type="text" class="phone p2" maxlength="4">-
+                    <input type="text" class="phone p3" maxlength="4">
+                </div>
+            </div>
+            <div class="chk">
+                <input type="checkbox" class="chk"> 만 13세이상입니다.
+            </div>
+            <div class="ver_num">
+                <input type="number" class="ver_num" maxlength=6 placeholder="인증번호 4자리를 입력해주세요.">
+                <button type="button" onclick="check_verify()">인증번호 확인</button>
+            </div>
+            <span class="timeout"></span>
+            <div class="for_ticket">
+                <div class="ticket">
+                    1일권 | 1,000원
+                </div>
+                <div class="ticket_side"></div>
+            </div>
+        </div>
+        <div class="info">
+            - 휴대폰과 카드 명의자가 동일해야 결제 가능하며, 결제금액 제한은 없습니다.<br>
+            - 지원카드: 모든 국내 신용/체크카드
+        </div>
+        <button type="button" id="pay" onclick="pay()">결제하기</button>
+    </div>
+</body>
+
+</html>

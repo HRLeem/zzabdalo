@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/oneday_code.css') }}">
+    <script src="{{ url_for('static', filename='./js/common.js') }}"></script>
+    <!-- <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/oneday_code.css">
+    <script src="../static/js/common.js"></script> -->
+    <title>짭 페달로</title>
+</head>
+
+<body>
+    <div class="wrap  b">
+        <nav class="">
+            <div>1일 이용권 코드</div>
+        </nav>
+        <div class="date">
+            가입/완료일 <span class="date"></span>
+        </div>
+        <div class="container ">
+            <div class="about_phone">
+                <div class="upper_phone">
+                    <span class="bold"> 휴대폰 번호</span>
+                </div>
+                <div class="phone">
+                    {{phone}}
+                </div>
+            </div>
+            <div class="code">
+                1회권 코드 : {{code}}
+            </div>
+            <div class="for_ticket">
+                <div class="ticket">
+                    1일권 | 1,000원
+                </div>
+                <div class="ticket_side"></div>
+            </div>
+        </div>
+        <div class="info">
+            <span class="lead">주의사항</span><br>
+            - 1회 대여시 2시간 이내에 반납하여야 합니다.<br>
+            (2시간 초과시 30분당 1,000원 부과)
+        </div>
+        <button type="button" id="pay" onclick="location.href='/'">홈으로</button>
+    </div>
+</body>
+
+</html>
