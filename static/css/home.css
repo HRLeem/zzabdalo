@@ -52,3 +52,22 @@ span.main-btn {
     font-weight: bold;
     margin-top: 0.4rem;
 }
+
+.use_btns {
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    margin-top: 1.5rem;
+}
+.use_btns button {
+    width: 46%;
+    border:0;
+    border-radius: 10px;
+    background-color: coral;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.use_btns button:first-child {
+    background-color: cadetblue
+}

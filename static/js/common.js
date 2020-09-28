@@ -81,30 +81,30 @@ const check_verify = () => {
         console.log(user_num)
         console.log(phone_num)
         user_num ? (
-        $.ajax({
-            type: "POST",
-            url: "/check_v",
-            data: {
-                "user_num": user_num,
-                "phone_num": phone_num
-            },
-            success: (res) => {
-                if (res) {
-                    console.log(res['result'])
-                    if (res['result'] == 'true') {
-                        alert('인증이 완료되었습니다.')
-                        timestop();
-                    } else if (res['result'] == 'already') {
-                        alert('이미 인증이 완료되었습니다.');
-                    } else {
-                        alert('인증번호가 틀렸습니다.')
-                    }
-                } else { alert('에러 발생') }
-            }
-        })
+            $.ajax({
+                type: "POST",
+                url: "/check_v",
+                data: {
+                    "user_num": user_num,
+                    "phone_num": phone_num
+                },
+                success: (res) => {
+                    if (res) {
+                        console.log(res['result'])
+                        if (res['result'] == 'true') {
+                            alert('인증이 완료되었습니다.')
+                            timestop();
+                        } else if (res['result'] == 'already') {
+                            alert('이미 인증이 완료되었습니다.');
+                        } else {
+                            alert('인증번호가 틀렸습니다.')
+                        }
+                    } else { alert('에러 발생') }
+                }
+            })
         ) : (
-    alert("휴대전화 번호를 입력하여 인증번호를 받아주세요.")
-)
+                alert("휴대전화 번호를 입력하여 인증번호를 받아주세요.")
+            )
 
     }
 }
@@ -118,7 +118,7 @@ const pay = () => {
             data: {},
             success: (res) => {
                 console.log(res['result'])
-                res['result'] == 'true' ? location.href='/oneday_code' : (
+                res['result'] == 'true' ? location.href = '/oneday_code' : (
                     res['reason'] == 'no_verify' ? (
                         alert("인증번호를 받아서 인증을 완료해주세요.")
                     ) : (
@@ -130,6 +130,33 @@ const pay = () => {
     ) : (
             alert(`짭 페달로 이용은 만 13세 이상부터 가능합니다.\n만 13세 이상이시면 체크 후 시도하여주세요.`)
         )
+}
+
+
+const use_oneday_post = () => {
+    let code = $('.use_oneday').val()
+    $.ajax({
+        url: '/use_oneday',
+        type: "POST",
+        data: { 'code': code },
+        success: (res) => {
+            if (res) {
+                if (res['result']=='success') {
+                    alert('자전거 대여가 완료되었습니다!');
+                } else {
+                    if(res['error'] == 'over' ) {
+                        let c = confirm('사용기간이 만료된 이용권입니다.\n일일이용권 구매창으로 이동하시겠습니까?');
+                        c? location.href='/one_day': console.log('failed-over')
+                    } else if (res['error'] == 'none') {
+                        let c = confirm('등록되지 않은 이용권입니다.\n일일이용권 구매창으로 이동하시겠습니까?');
+                        c? location.href='/one_day' : console.log('failed-none')
+                    } else { alert('서버에 문제가 발생하였습니다. 관리자에게 문의해주세요')}
+                }
+            } else {
+                alert('서버에 문제가 발생하였습니다. 관리자에게 문의해주세요')
+            }
+}
+    })
 }
 
 // TODO

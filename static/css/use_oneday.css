@@ -1,0 +1,17 @@
+.container_one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 10rem;
+}
+
+.container_one span {
+    font-size: 1.4rem;
+}
+
+.container_one input {
+    text-align:center;
+    height: 3rem;
+    font-size: 2rem;
+}
